@@ -48,11 +48,11 @@
                   <div class="col-sm-12">
                      <div class="custom_menu">
                         <ul>
-                           <li><a href="#">Best Sellers</a></li>
-                           <li><a href="#">Gift Ideas</a></li>
-                           <li><a href="#">New Releases</a></li>
-                           <li><a href="#">Today's Deals</a></li>
-                           <li><a href="#">Customer Service</a></li>
+                           <li style="background-color: #f26522; padding:10px; border-radius:5px; float:right; margin-top:20px; margin-right: 40px;"><a href="#">Register</a></li>
+                           <li style="background-color: #f26522; padding:10px; border-radius:5px;float:right; margin-top:20px; margin-right: 40px;"><a href="#">Login</a></li>
+                           <li style="background-color: #f26522; padding:10px; border-radius:5px;float:right; margin-top:20px; margin-right: 40px;"><a href="#">New Releases</a></li>
+                           <li style="background-color: #f26522; padding:10px; border-radius:5px;float:right; margin-top:20px;margin-right: 40px;"><a href="#">Today's Deals</a></li>
+                           <li style="background-color: #f26522; padding:10px; border-radius:5px;float:right; margin-top:20px; margin-right: 40px;"><a href="#">Customer Service</a></li>
                         </ul>
                      </div>
                   </div>
@@ -187,7 +187,12 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text" style="color:darkblue;">{{dress.name}}</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ {{dress.price}}</span></p>
+                                 {% if dress.offer %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ <del>{{dress.price}}</del> </span></p>
+                                 <p class="price_text">Offer Price  <span style="color: #262626;">$ {{dress.offer_price}}</span></p>
+                                 {% else %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ {{dress.price}} </span></p>
+                                 {% endif %}
                                  <div class="tshirt_img"><img src="{{baseUrl}}/{{dress.image}}"></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -209,7 +214,12 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text" style="color:darkblue;">{{dress.name}}</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ {{dress.price}}</span></p>
+                                 {% if dress.offer %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ <del>{{dress.price}}</del> </span></p>
+                                 <p class="price_text">Offer Price  <span style="color: #262626;">$ {{dress.offer_price}}</span></p>
+                                 {% else %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ {{dress.price}} </span></p>
+                                 {% endif %}
                                  <div class="tshirt_img"><img src="{{baseUrl}}/{{dress.image}}"></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -231,7 +241,12 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text" style="color:darkblue;">{{dress.name}}</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ {{dress.price}}</span></p>
+                                 {% if dress.offer %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ <del>{{dress.price}}</del> </span></p>
+                                 <p class="price_text">Offer Price  <span style="color: #262626;">$ {{dress.offer_price}}</span></p>
+                                 {% else %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ {{dress.price}} </span></p>
+                                 {% endif %}
                                  <div class="tshirt_img"><img src="{{baseUrl}}/{{dress.image}}"></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -267,7 +282,12 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text" style="color:darkblue;">{{electronic.name}}</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ {{electronic.price}}</span></p>
+                                 {% if electronic.offer %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ <del>{{electronic.price}}</del> </span></p>
+                                 <p class="price_text">Offer Price  <span style="color: #262626;">$ {{electronic.offer_price}}</span></p>
+                                 {% else %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ {{electronic.price}} </span></p>
+                                 {% endif %}
                                  <div class="electronic_img"><img src="{{baseUrl}}/{{electronic.image}}"></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -289,7 +309,12 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text" style="color:darkblue;">{{electronic.name}}</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ {{electronic.price}}</span></p>
+                                 {% if electronic.offer %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ <del>{{electronic.price}}</del> </span></p>
+                                 <p class="price_text">Offer Price  <span style="color: #262626;">$ {{electronic.offer_price}}</span></p>
+                                 {% else %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ {{electronic.price}} </span></p>
+                                 {% endif %}
                                  <div class="electronic_img"><img src="{{baseUrl}}/{{electronic.image}}"></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -311,7 +336,12 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text" style="color:darkblue;">{{electronic.name}}</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ {{electronic.price}}</span></p>
+                                 {% if electronic.offer %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ <del>{{electronic.price}}</del> </span></p>
+                                 <p class="price_text">Offer Price  <span style="color: #262626;">$ {{electronic.offer_price}}</span></p>
+                                 {% else %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ {{electronic.price}} </span></p>
+                                 {% endif %}
                                  <div class="electronic_img"><img src="{{baseUrl}}/{{electronic.image}}"></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -347,7 +377,12 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text" style="color:darkblue;">{{jewellery.name}}</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ {{jewellery.price}}</span></p>
+                                 {% if jewellery.offer %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ <del>{{jewellery.price}}</del> </span></p>
+                                 <p class="price_text">Offer Price  <span style="color: #262626;">$ {{jewellery.offer_price}}</span></p>
+                                 {% else %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ {{jewellery.price}} </span></p>
+                                 {% endif %}
                                  <div class="jewellery_img"><img src="{{baseUrl}}/{{jewellery.image}}"></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -369,7 +404,12 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text" style="color:darkblue;">{{jewellery.name}}</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ {{jewellery.price}}</span></p>
+                                 {% if jewellery.offer %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ <del>{{jewellery.price}}</del> </span></p>
+                                 <p class="price_text">Offer Price  <span style="color: #262626;">$ {{jewellery.offer_price}}</span></p>
+                                 {% else %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ {{jewellery.price}} </span></p>
+                                 {% endif %}
                                  <div class="jewellery_img"><img src="{{baseUrl}}/{{jewellery.image}}"></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -391,7 +431,12 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text" style="color:darkblue;">{{jewellery.name}}</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ {{jewellery.price}}</span></p>
+                                 {% if jewellery.offer %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ <del>{{jewellery.price}}</del> </span></p>
+                                 <p class="price_text">Offer Price  <span style="color: #262626;">$ {{jewellery.offer_price}}</span></p>
+                                 {% else %}
+                                 <p class="price_text">Price  <span style="color: #262626;">$ {{jewellery.price}} </span></p>
+                                 {% endif %}
                                  <div class="jewellery_img"><img src="{{baseUrl}}/{{jewellery.image}}"></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>

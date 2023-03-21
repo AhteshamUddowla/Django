@@ -6,17 +6,22 @@ class dress:
     name: str
     image: str
     price: str
+    offer: bool
 
 class electronic:
     id: int
     name: str
     image: str
-    price: str
+    price: int
+    offer: bool
+    offer_price: int
 
 class jewellery:
     id: int
     name: str
     image: str
-    price: str
+    price: int
+    offer: bool
+    offer_price: int
 
 

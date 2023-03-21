@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'app1.apps.App1Config',
+    'travello.apps.TravelloConfig',
 ]
 
 MIDDLEWARE = [

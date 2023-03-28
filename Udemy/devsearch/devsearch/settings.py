@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Created apps must be registerd here
     'projects.apps.ProjectsConfig',
     'users.apps.UsersConfig',
 ]
@@ -61,9 +62,12 @@ ROOT_URLCONF = 'devsearch.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+
+        # Templates must be configured here
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
         ],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,13 +130,17 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 MEDIA_URL = ''
+# MEDIA_URL = '/images/'
 
+# Configure Static Folder
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     # BASE_DIR / 'static'
 ]
 
+# User uploaded image should be saved in this location
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+# It defines where our static files are going
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
 
 # Default primary key field type

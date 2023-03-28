@@ -5,6 +5,9 @@ from .models import Profile
 
 # @receiver(post_save, sender=Profile)
 def createProfile(sender, instance, created, **kwargs):
+    # print("Profile Saved")
+    # print("Instance:", instance)
+    # print("Created:", created)
     if created:
         user = instance
         profile = Profile.objects.create(
@@ -15,6 +18,7 @@ def createProfile(sender, instance, created, **kwargs):
         )
 
 def deleteUser(sender, instance, **kwargs):
+    # print("Deleting user...")
     user = instance.user
     user.delete()
 

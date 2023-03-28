@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+
+#Static is basically going to help us create a new url for our static files
 from django.conf.urls.static import static
 
 urlpatterns = [

@@ -20,6 +20,14 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+    
+    # Sort project by 'created' in ascending order
+    class Meta:
+        ordering = ['created']
+
+    # Sort project by 'created' in descending order
+    # class Meta:
+    #     ordering = ['-created']
 
 
 class Review(models.Model):

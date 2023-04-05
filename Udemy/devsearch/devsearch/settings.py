@@ -129,10 +129,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+# User uploaded images are users own thing, we need to tell django how to connect them
 MEDIA_URL = ''
 # MEDIA_URL = '/images/'
 
-# Configure Static Folder
+# Configure Static Folder to use static files like css, js, images
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     # BASE_DIR / 'static'
@@ -140,7 +141,7 @@ STATICFILES_DIRS = [
 
 # User uploaded image should be saved in this location
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
-# It defines where our static files are going
+# It works when our project is in live server
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
 
 # Default primary key field type

@@ -1,6 +1,6 @@
 from .models import Project, Tag
 from django.db.models import Q
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage 
 
 
 def paginateProjects(request, projects, results):
@@ -18,7 +18,7 @@ def paginateProjects(request, projects, results):
     except EmptyPage:
         page = paginator.num_pages
         projects = paginator.page(page) 
-
+    
     # 5 pagination in each page
     leftIndex = int(page)-4
 
@@ -43,11 +43,12 @@ def searchProject(request):
 
     tags = Tag.objects.filter(name__icontains=search_query)
 
+    # Using Q for filtering by multiple parameter
     projects = Project.objects.distinct().filter(
         Q(title__icontains=search_query) |
         Q(description__icontains=search_query) |
         Q(owner__name__icontains=search_query) |
-        Q(tags__in=tags)
+        Q(tags__in=tags) 
     )
 
     return projects, search_query

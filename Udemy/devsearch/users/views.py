@@ -17,7 +17,7 @@ def loginUser(request):
 
     if request.method == 'POST':
         # print(request.POST)
-        username = request.POST['username']
+        username = request.POST['username'].lower()
         password = request.POST['password']
 
         try:
@@ -30,12 +30,12 @@ def loginUser(request):
 
         if user is not None:
             login(request, user)
-            return redirect('profiles')
+            return redirect(request.GET['next'] if 'next' in request.GET else 'account')
         else:
             # print('Username or password is incorrect')
             messages.error(request, 'Username or password is incorrect')
 
-    return render(request, 'users/login_register.html')
+    return render(request, 'users/login_register.html', {'page':page})
 
 def logoutUser(request):
     logout(request)
@@ -98,8 +98,9 @@ def editAccount(request):
 
     # This instance pre-fills the form
     form = ProfileForm(instance=profile)
-
+    
     if request.method == 'POST':
+        
         form = ProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
@@ -112,7 +113,7 @@ def editAccount(request):
 @login_required(login_url='login')
 def createSkill(request):
     profile = request.user.profile
-    print(profile)
+    # print(profile)
     form = SkillForm()
     # print(form)
 

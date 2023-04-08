@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     # Created apps must be registerd here
     'projects.apps.ProjectsConfig',
     'users.apps.UsersConfig',
+
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -124,6 +126,13 @@ TIME_ZONE = 'Asia/Dhaka'
 USE_I18N = True
 
 USE_TZ = True
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'devsearch87@gmail.com'
+# EMAIL_HOST_PASSWORD = 'devsearchAdmin@87'
 
 
 # Static files (CSS, JavaScript, Images)

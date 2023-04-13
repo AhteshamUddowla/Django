@@ -174,11 +174,12 @@ USE_I18N = True
 USE_TZ = True
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST = 'smtp.sendgrid.net'
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'devsearch87@gmail.com'
-# EMAIL_HOST_PASSWORD = 'devsearchAdmin@87'
+# EMAIL_HOST_USER = 'apikey'
+# EMAIL_HOST_PASSWORD = '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'
+
 
 
 # Static files (CSS, JavaScript, Images)

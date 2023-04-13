@@ -6,6 +6,10 @@ from .models import Profile
 from django.core.mail import send_mail
 from django.conf import settings
 
+# from sendgrid import SendGridAPIClient
+# from sendgrid.helpers.mail import Mail
+
+
 # @receiver(post_save, sender=Profile)
 def createProfile(sender, instance, created, **kwargs):
     # print("Profile Saved")
@@ -26,7 +30,7 @@ def createProfile(sender, instance, created, **kwargs):
         # send_mail(
         #     subject,
         #     message,
-        #     settings.EMAIL_HOST_USER,
+        #     'devsearch87@gmail.com',
         #     [profile.email],
         #     fail_silently=False,
 

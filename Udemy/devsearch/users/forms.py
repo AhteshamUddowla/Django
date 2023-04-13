@@ -1,6 +1,7 @@
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django import forms
 from .models import Profile, Skill, Message
 
 class CustomUserCreationForm(UserCreationForm):
@@ -10,6 +11,9 @@ class CustomUserCreationForm(UserCreationForm):
         fields = ['first_name', 'email', 'username', 'password1', 'password2']
         labels = {
             'first_name':'Name',
+        }
+        widgets = {
+            'first_name': forms.TextInput(attrs={'autofocus': True}) 
         }
 
     def __init__(self, *args, **kwargs):
